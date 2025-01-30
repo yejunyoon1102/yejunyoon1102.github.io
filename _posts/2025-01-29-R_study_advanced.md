@@ -18,7 +18,7 @@ lavaan은 “latent variable anlysis(잠재 변수 분석)”의 약자로, 다�
 - **잠재 변수(latent variable)** : 측정이 어려운 변수들
     - 이러한 잠재변수를 여러 **관측변수(observed variable)**들을 이용해 추정 및 정의하고, 구조 모형에서 활용함
     
-    ![1.png](/assets/img/posts/R/1.png)
+    ![1.png](/assets/img/posts/R/R_study_1st/advanced/1.png)
     
 - 경로도(Path Diagram) : 연구자가 적합하려는 모델의 간략한 개요를 시각적으로 표현한 도식
     - 관찰 변수 : 일반적으로 사각형으로 표시
@@ -32,7 +32,7 @@ lavaan은 “latent variable anlysis(잠재 변수 분석)”의 약자로, 다�
             - 외생(exogenous) 잠재변수 : 다른 변수에 영향을 주기만 하는 변수
             - 내생 (endogenous) 잠재변수 : 한번 이상 다른 변수에 의해 영향을 받는 변수
     
-    ![2.png](/assets/img/posts/R/2.png)
+    ![2.png](/assets/img/posts/R/R_study_1st/advanced/2.png)
     
 
 이런 경로도를 SEM 프로그램이 요구하는 입력 형식으로 변환하는 과정이 기존 패키지(EQS, LISREL, AMOS 등)이 힘듦 → lavaan!
@@ -41,7 +41,7 @@ lavaan은 “latent variable anlysis(잠재 변수 분석)”의 약자로, 다�
 
 1. **간단한 회귀 모델**
 
-![3.png](/assets/img/posts/R/3.png)
+![3.png](/assets/img/posts/R/R_study_1st/advanced/3.png)
 
 - β0 : 절편(intercept)
 - β1, β2, β3, β4 : 회귀 계수(regression coefficients)
@@ -130,7 +130,7 @@ item1 ~ 1  # 관찰 변수의 절편
 f1 ~ 1     # 잠재 변수의 절편
 ```
 
-![4.png](/assets/img/posts/R/4.png)
+![4.png](/assets/img/posts/R/R_study_1st/advanced/4.png)
 
 예제 모델 구문
 
@@ -242,7 +242,7 @@ myModel <- '
         - 논리적 근거 및 MI 이용하여 모형 개선
         - 판별 타당도
         
-        ![5.png](/assets/img/posts/R/5.png)
+        ![5.png](/assets/img/posts/R/R_study_1st/advanced/5.png)
         
 3. 구조모형 분석
     - 핵심 가설 검증
@@ -309,11 +309,11 @@ fit <- sem(model, data = PoliticalDemocracy)
 summary(fit, standardized = TRUE)
 ```
 
-![6.png](/assets/img/posts/R/6.png)
+![6.png](/assets/img/posts/R/R_study_1st/advanced/6.png)
 
-![7.png](/assets/img/posts/R/7.png)
+![7.png](/assets/img/posts/R/R_study_1st/advanced/7.png)
 
-![8.png](/assets/img/posts/R/8.png)
+![8.png](/assets/img/posts/R/R_study_1st/advanced/8.png)
 
 ```r
 # 추가 적합도 지수 확인
@@ -325,7 +325,7 @@ summary(fit, fit.measures = TRUE)
 fitMeasures(fit, c("chisq", "pvalue", "rmsea", "gfi", "cfi"))
 ```
 
-![9.png](/assets/img/posts/R/9.png)
+![9.png](/assets/img/posts/R/R_study_1st/advanced/9.png)
 
 모형 개선이 필요하다면?
 
@@ -348,7 +348,7 @@ modindices(fit2, sort. = TRUE)
 modindices(fit2, sort. = TRUE, minimum.value = 3)
 ```
 
-![10.png](/assets/img/posts/R/10.png)
+![10.png](/assets/img/posts/R/R_study_1st/advanced/10.png)
 
 MI > 3.84 : 통계적으로 유의미한 개선 가능성
 
@@ -363,7 +363,7 @@ MI > 3.84 : 통계적으로 유의미한 개선 가능성
 - 제안 3) y2 ~~ y4 : y2와 y4의 상관관계 (채택)
     - y2와 y4는 각각 1960년의 정치적 반대 자유도와 선거로 선출된 입법부의 효과성
 
-![11.png](/assets/img/posts/R/11.png)
+![11.png](/assets/img/posts/R/R_study_1st/advanced/11.png)
 
 ```r
 # 잠재변수 차원 성능 지표
@@ -372,7 +372,7 @@ library(semTools)
 reliability(fit3)
 ```
 
-![12.png](/assets/img/posts/R/12.png)
+![12.png](/assets/img/posts/R/R_study_1st/advanced/12.png)
 
 잠재변수의 신뢰도를 측정했다면 이렇게 정의된 잠재변수들이 구분되는지 확인해야함 → 판별 타당도(discriminant validity) 계산
 
@@ -407,4 +407,4 @@ ind60 dem60 dem65
 
 semPlot 이라는 패키지를 이용하여 구조방정식 분석 결과를 시각화 할 수 있음!
 
-![13.png](/assets/img/posts/R/13.png)
+![13.png](/assets/img/posts/R/R_study_1st/advanced/13.png)

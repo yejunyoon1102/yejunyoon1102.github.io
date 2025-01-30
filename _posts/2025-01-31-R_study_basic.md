@@ -436,7 +436,7 @@ qplot(data = mpg, x = drv, y = hwy, geom = 'boxplot')
 qplot(data = mpg, x = drv, y = hwy, geom = "boxplot", colour = drv)
 ```
 
-![17.png](/assets/img/posts/R/R_study_1st/basic/177.png)
+![17.png](/assets/img/posts/R/R_study_1st/basic/17.png)
 
 **함수의 기능이 궁금할때**
 

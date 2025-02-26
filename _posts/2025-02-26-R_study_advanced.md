@@ -1,7 +1,7 @@
 ---
 layout : post
 title : "데이터 분석 : DEA(자료포락분석) 논문 리뷰 : EPL 공격수 효율성 분석"
-date : 2025-01-28
+date : 2025-02-26
 categories : [Data Analysis, R]
 ---
 # 심화 발제
@@ -57,7 +57,7 @@ categories : [Data Analysis, R]
     ```
     
     ![스크린샷_2025-02-26_204038.png](/assets/img/posts/R/R_study_5th/advanced/스크린샷_2025-02-26_204038.png)
-    
+
 
 ## DEA 논문 리뷰 : Moneyball: Analyzing the Efficiency of English Premier League Strikers Using Data Envelopment Analysis
 
@@ -96,7 +96,7 @@ categories : [Data Analysis, R]
     - DEA 모델의 비현실적인 가중치 문제를 해결하기 위해 상대적 가중치 제한(Relative Weight Restrictions, RWR)을 도입하여 보다 현실적인 평가 가능
     - 연구에서는 득점, 창의적 플레이, 드리블, 볼 운반, 수비 등 다양한 기술적 요소를 종합적으로 평가하는 새로운 PEI 모델을 제안함
 
-### Methodology
+### 3. Methodology
 
 **3.1 자료 포락 분석(DEA)**
 
@@ -129,7 +129,7 @@ categories : [Data Analysis, R]
     - 투입 변수 : 연봉
     - 산출 변수 : 수비 기여도(태클 성공, 블록 및 인터셉트, 압박 성공, 실점 유발 및 실수), 드리블 및 볼 운반 능력(드리블 성공, 전진 거리 운반, 파이널 서드 진입, 박스 진입, 드리블 기반 골 기회 창출, 드리블 기반 슛 기회 창출)
 
-### Result and Discussion
+### 4. Result and Discussion
 
 **4.1 DEA 모델-1 : 공격수 평가**
 
@@ -173,7 +173,7 @@ categories : [Data Analysis, R]
     - 크리스티안 벤테케 : 골 결정력 강점, BUT 창조성 부족
     - 미치 바추아이 : 전반적으로 비효율적, 득점력 58.54% 부족, 창조성 9.81% 부족
 
-### Conclusion and Future research
+### 5. Conclusion and Future research
 
 **5.1 연구 결론**
 
